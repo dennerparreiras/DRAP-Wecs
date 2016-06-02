@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A25700E-5027-4A6F-8834-E72FEEE729E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_2015_29_04_TI_AED_Console</RootNamespace>
+    <AssemblyName>_2015_29_04_TI_AED_Console</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUsScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUsScreen.Designer.cs">
+      <DependentUpon>AboutUsScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComparisonScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComparisonScreen.Designer.cs">
+      <DependentUpon>ComparisonScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsuptionReportScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsuptionReportScreen.Designer.cs">
+      <DependentUpon>ConsuptionReportScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libs\IQuickSortComparable.cs" />
+    <Compile Include="Libs\QuickSort.cs" />
+    <Compile Include="MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libs\DoubleLinkedList.cs" />
+    <Compile Include="Libs\HeapSort.cs" />
+    <Compile Include="Libs\IHeapSortComparable.cs" />
+    <Compile Include="Models\Bill.cs" />
+    <Compile Include="Models\Comparison.cs" />
+    <Compile Include="Models\EnergyBill.cs" />
+    <Compile Include="Models\Report.cs" />
+    <Compile Include="Models\WaterBill.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportSelectScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportSelectScreen.Designer.cs">
+      <DependentUpon>ReportSelectScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchScreen.Designer.cs">
+      <DependentUpon>SearchScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\BillFactory.cs" />
+    <Compile Include="Util\Services.cs" />
+    <EmbeddedResource Include="AboutUsScreen.resx">
+      <DependentUpon>AboutUsScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComparisonScreen.resx">
+      <DependentUpon>ComparisonScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsuptionReportScreen.resx">
+      <DependentUpon>ConsuptionReportScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportSelectScreen.resx">
+      <DependentUpon>ReportSelectScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchScreen.resx">
+      <DependentUpon>SearchScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\DRAP WECS - Developer Team.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\AboutUs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\BG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Clean.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Comparation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\DirectImport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ImportByFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Relatory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\Splash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\AboutUsWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\CleanWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ComparationWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\DirectImportWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ImportByFileWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\RelatoryWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\SearchWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ComparationBlack.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
